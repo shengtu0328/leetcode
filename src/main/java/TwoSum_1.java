@@ -62,8 +62,9 @@ public class TwoSum_1 {
         return result;
     }
 
-
-
+    /*
+     *一遍哈希表
+     */
     public int[] twoSum3(int[] nums, int target) {
         int[] result=new int[2];
         HashMap<Integer,Integer> map=new HashMap<Integer,Integer>();
