@@ -16,6 +16,16 @@ package linkedlist;
  * 来源：力扣（LeetCode）
  * 链接：https://leetcode-cn.com/problems/reverse-linked-list
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+ *
+ *  result            first
+ *
+ *  1                 1
+ *  2 1               2
+ *  3 2 1             3
+ *  4 3 2 1           4
+ *  5 4 3 2 1         5
+ *
+ *
  */
 public  class ReverseLinkedList_206 {
 
@@ -32,14 +42,21 @@ public  class ReverseLinkedList_206 {
 
     public static ListNode reverseList(ListNode head) {
         ListNode first = head;
-        ListNode reverseHead = null; //建立一个新的节点用来存放结果
+        ListNode result = null; //建立一个新的节点用来存放结果
         while (first != null) { //遍历输入链表，开始处理每一个节点
-            ListNode second = first.next; //先处理第一个节点first，所以需要一个指针来存储first的后继
-            first.next = reverseHead; //将first放到新链表头节点的头部
-            reverseHead = first; //移动新链表的头指针，让它始终指向新链表头部
-            first = second; //继续处理原链表的节点，即之前指针存放的后继，循环往复
+
+            ListNode second = first.next;
+
+
+            first.next=result;
+            result=first;
+
+            first=second;
+
+
+
         }
-        return reverseHead;
+        return result;
     }
     public static void main(String[] args) {
         ListNode l1 = new ListNode(1);
