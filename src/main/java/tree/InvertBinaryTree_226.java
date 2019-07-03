@@ -31,7 +31,7 @@ package tree;
  * 链接：https://leetcode-cn.com/problems/invert-binary-tree
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public class invertbinarytree_226 {
+public class InvertBinaryTree_226 {
 
 
     public static class TreeNode {
@@ -47,7 +47,7 @@ public class invertbinarytree_226 {
     public  static TreeNode invertTree(TreeNode root) {
 
 
-        if (root == null ) {                              //与461题累死，二叉树题目的本质是什么?递归！！
+        if (root == null ) {                              //与461题类似，二叉树题目的本质是什么?递归！！
             return null;
         }
         // 先合并根节点
@@ -81,7 +81,7 @@ public class invertbinarytree_226 {
         t7.right=t9;
 
 
-        TreeNode treeNode = invertbinarytree_226.invertTree(t4);
+        TreeNode treeNode = InvertBinaryTree_226.invertTree(t4);
         System.out.println(treeNode);
 
     }

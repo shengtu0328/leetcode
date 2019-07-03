@@ -29,7 +29,7 @@ package tree;
  * 链接：https://leetcode-cn.com/problems/merge-two-binary-trees
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public class Mergetwobinarytrees_617 {
+public class MergeTwoBinaryTrees_617 {
 
     public static class TreeNode {
         int val;
@@ -40,15 +40,19 @@ public class Mergetwobinarytrees_617 {
         }
     }
     public static TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
-        if (t1 == null && t2 == null) {
+
+        if(t1==null&&t2==null){
             return null;
         }
-        // 先合并根节点
-        TreeNode root = new TreeNode((t1 == null ? 0 : t1.val) + (t2 == null ? 0 : t2.val));
-        // 再递归合并左右子树
-        root.left = mergeTrees(t1 == null ? null : t1.left, t2 == null ? null : t2.left);
-        root.right = mergeTrees(t1 == null ? null : t1.right, t2 == null ? null : t2.right);
-        return root;
+
+
+        TreeNode treeNode=new TreeNode(((t1==null)?0:t1.val)+((t2==null)?0:t2.val));
+
+
+        treeNode.left=mergeTrees(t1==null?null:t1.left,t2==null?null:t2.left);
+        treeNode.right=mergeTrees(t1==null?null:t1.right,t2==null?null:t2.right);
+
+        return treeNode;
     }
 
     public static void main(String[] args) {
@@ -70,7 +74,7 @@ public class Mergetwobinarytrees_617 {
         t2_1.right=t2_4;
         t2_3.right=t2_7;
 
-        TreeNode treeNode = Mergetwobinarytrees_617.mergeTrees(t1_1, t2_2);
+        TreeNode treeNode = MergeTwoBinaryTrees_617.mergeTrees(t1_1, t2_2);
         System.out.println(treeNode);
 
     }

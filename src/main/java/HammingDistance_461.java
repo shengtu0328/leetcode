@@ -26,7 +26,7 @@
  * 链接：https://leetcode-cn.com/problems/hamming-distance
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public class hammingdistance_461 {
+public class HammingDistance_461 {
 
     public static int hammingDistance(int x, int y) {
         int i = x ^ y;  //先异或  相同0 不同1
@@ -53,7 +53,7 @@ public class hammingdistance_461 {
 //        5   101
         //        6 ^ 5  100
 
-        System.out.println(hammingdistance_461.hammingDistance(4, 3));
+        System.out.println(HammingDistance_461.hammingDistance(4, 3));
 
 //        System.out.println(Integer.toBinaryString(4 ^ 3).replaceAll("0", "").length());
 //        System.out.println(Integer.toBinaryString(4 ^ 3));
