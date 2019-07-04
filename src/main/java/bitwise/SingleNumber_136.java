@@ -31,7 +31,7 @@ public class SingleNumber_136 {
         int result = 0;
 
         for (int i = 0; i < nums.length; i++) {
-            result = result ^ nums[i];           //两个相同的数进行异或运算 就会变成0，所以挨个执行异或运算后，剩下的就是只出现了一次的元素
+            result = result ^ nums[i];           //两个相同的数进行异或运算结果是0，并且任意数与0进行异或结果还是这个数，所以挨个执行异或运算后，结果就是只出现了一次的元素
         }
 
         return result;

@@ -29,7 +29,7 @@ public class MaximumDepthOfBinaryTree_104 {
     /*
     *.
         求一颗数的最大深度 等于 这一颗树下一层的最大深度+1，null层算0
-        依次类推
+        依次类推（大问题分成小问题  递归）
 
     */
 
