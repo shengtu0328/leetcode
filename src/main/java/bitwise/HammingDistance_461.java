@@ -1,3 +1,5 @@
+package bitwise;
+
 /**
  * @Auther: rqxiao
  * @Date: 2019-7-1 15:51
