@@ -1,3 +1,5 @@
+package binarysearch;
+
 /**
  * @Author: rqxiao
  * @Date: 2020-7-22 16:18
