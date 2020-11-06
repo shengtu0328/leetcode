@@ -48,13 +48,13 @@ public class Solution {
      * @param beginWord
      * @param endWord
      * @param wordList
-     * @return 思路：可以通过题目中给的数据构造出图的模型进行一次bfs操作就可以完获得 从 beginWord 到 endWord 的最短转换序列的长度
+     * @return 思路：可以通过题目中给的数据构造出图的模型进行bfs操作就可以获得 从 beginWord 到 endWord 的最短转换序列的长度
      * 由题可知  * 每次转换只能改变一个字母。* 转换过程中的中间单词必须是字典中的单词。
      * 有两种办法找到下一层元素
      * 办法一：根据上一层元素 直接对wordList里其他元素判断其是否能只能改变一个字母成为它的下层，但是如果wordList元素很多 ，这样时间复杂度是O(N*单词长度)  题目说过所有单词具有相同的长度。
-     * 办法二：根据上一层元素，对上层元素每个位置列举所有小写英文字可能出现的情况，判断其他元素是否满足其中（这一步可以用hashset来实现,hashset本质上是hashmap，hashmap本质上是数组，从hashmap获得元素亦可以看做是O(1)），这样时间复杂度是O(26*单词长度)
+     * 办法二：根据上一层元素，对上层元素每个位置列举所有小写英文字可能出现的情况，判断其他元素是否满足其中（判断其他元素是否满足其中这一步可以用hashset来实现,hashset本质上是hashmap，hashmap本质上是数组，从hashmap获得元素亦可以看做是O(1)），这样时间复杂度是O(26*单词长度)
      * 每次找到下层元素后长度就加一，找到endWord就结束
-     * 如果遇到了已经访问过的元素就不需要再访问了
+     * 在图中如果遇到了已经访问过的元素就不需要再访问了
      */
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
 
