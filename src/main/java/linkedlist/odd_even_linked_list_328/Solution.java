@@ -26,8 +26,10 @@ import linkedlist.ListNode;
  */
 public class Solution {
 
-
-    //2->1->3->5->6->4->7->NULL
+    // odd
+    // 2       3       6       7
+    //     1      5        4      NULL
+    //    even
     public ListNode oddEvenList(ListNode head) {
         if (head == null) {
             return head;
